@@ -1,0 +1,182 @@
+/* New Recipe Styles */
+.newRecipeHeader {
+    text-align: center;
+    font-size: 72px;
+    font-weight: bold;
+    font-family: 'Allura', cursive;
+}
+
+.notebookPage {
+    background-image: url('/images/OpenNotepadCropped.png');
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-size: 90% 75%;
+    background-position: center 0px;
+    /* background-blend-mode: color; */
+    /* background-attachment: fixed; */
+    position: relative;
+    top: 10px;
+    left: 0%;
+    /* transform: translate(-80%, 10%); */
+    width: 1600px;
+    height: 1200px;
+    padding-left: 10%;
+    padding-top: 3.5%;
+    /* padding-bottom: 20px; */
+    /* box-sizing: border-box; */
+    /* box-shadow: 0 15px 25px rgba(0, 0, 0, .5); */
+    /* border-radius: 10px; */
+}
+
+.newRecipeFormContent {
+    position: absolute;
+    font-size: 36px;
+    font-family: 'Allura', cursive;
+}
+
+.newRecipeTitleField {
+    position: relative;
+    top: 20px;
+    text-align: left;
+    font-size: 42px;
+    padding-bottom: 15px;
+    background-color: transparent;
+}
+
+.newRecipeTitleField label {
+    padding-right: 15px;
+}
+
+.newRecipeTitleField input {
+    background-color: transparent;
+    border-radius: 3px;
+    border-width: medium;
+}
+
+.newRecipeImageUpload {
+    padding-top: 8%;
+    padding-left: 25%;
+}
+
+.newRecipeDifficultyAndTimeLine {
+    padding-top: 65px;
+    padding-bottom: 12px;
+}
+
+.newRecipeDifficultyField {
+    float: left;
+}
+
+.newRecipeDifficultyField label {
+    margin-bottom: 1px;
+}
+
+.newRecipeDifficultyField select {
+    background-color: transparent;
+    border-radius: 3px;
+    border-width: medium;
+}
+
+.newRecipeCookTimeField {
+    padding-left: 175px;
+}
+
+.newRecipeCookTimeField label {
+    margin-bottom: 1px;
+}
+
+.newRecipeCookTimeField input {
+    background-color: transparent;
+    border-radius: 3px;
+    border-width: medium;
+}
+
+.newRecipeCategoryAndCuisineLine {
+    padding-bottom: 14px;
+}
+
+.newRecipeCategoryField {
+    float: left;
+}
+
+.newRecipeCategoryField label {
+    margin-bottom: 1px;
+}
+
+.newRecipeCategoryField select {
+    background-color: transparent;
+    border-radius: 3px;
+    border-width: medium;
+}
+
+.newRecipeCuisineField {
+    padding-left: 175px;
+}
+
+.newRecipeCuisineField label {
+    margin-bottom: 1px;
+}
+
+.newRecipeCuisineField select {
+    background-color: transparent;
+    border-radius: 3px;
+    border-width: medium;
+}
+
+.newRecipeIngredientsField {
+    position: absolute;
+    top: -0.5%;
+    left: 130%;
+}
+
+.newRecipeIngredientsField textarea {
+    background-color: transparent;
+    border-radius: 3px;
+    border-width: medium;
+}
+
+.newRecipeInstructionsField {
+    position: absolute;
+    top: 35%;
+    left: 130%;
+}
+
+.newRecipeInstructionsField textarea {
+    background-color: transparent;
+    border-radius: 3px;
+    border-width: medium;
+}
+
+.newRecipeVegetarianField {
+    float: left;
+    padding-top: 55px;
+    padding-right: 70px;
+}
+
+.newRecipeVeganField {
+    float: left;
+    padding-top: 55px;
+    padding-right: 70px;
+}
+
+.newRecipeGlutenFreeField {
+    /* float: left; */
+    padding-top: 55px;
+    padding-right: 100px;
+}
+
+.newRecipeButton {
+    border-radius: 15px;
+    position: relative;
+    top: -200px;
+    left: 1000px;
+}
+
+.newRecipeIDField {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.newRecipeAuthorIDField {
+    text-align: center;
+}

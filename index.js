@@ -5,8 +5,6 @@ const app = express();
 const path = require('path');
 let fetch = require('node-fetch');
 
-const generatePassword = require('password-generator');
-
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(path.join(__dirname, '/client/build')));
 
@@ -65,12 +63,12 @@ class User {
 const firebase = require("firebase");
 // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyDdiRz7i8b8ERm2kNPq59X1aTnyesRjr64",
-    authDomain: "recipe-app-4509.firebaseapp.com",
-    databaseURL: "https://recipe-app-4509.firebaseio.com",
-    projectId: "recipe-app-4509",
-    storageBucket: "recipe-app-4509.appspot.com",
-    messagingSenderId: "491235211599"
+    apiKey: "AIzaSyBC2_c3t9AArYzbDbvBfFRBc5p0CkM0xqk",
+    authDomain: "recipe-book-4509.firebaseapp.com",
+    databaseURL: "https://recipe-book-4509.firebaseio.com",
+    projectId: "recipe-book-4509",
+    storageBucket: "recipe-book-4509.appspot.com",
+    messagingSenderId: "221347556023"
 };
 firebase.initializeApp(config);
 

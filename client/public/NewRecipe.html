@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>New Recipe Page</title>
+</head>
+
+<body style="background-image:url(http://www.freepptbackgrounds.net/wp-content/uploads/2014/02/Restaurant-Menu-Theme-Backgrounds.jpg)">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="Home.html">Fuck the Microwave</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="Home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="NewRecipe.html">New Recipe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="RecipeInfo.html">Favorites</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Quick Fix</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Breakfast</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Lunch</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dinner</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Desserts</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <body>
+        <form id="newRecipeForm" method="POST" action="/newRecipe">
+            <label for="recipeTitleField"><h2>Recipe Title</h2></label>
+            <input type="text" name="recipeTitleField" placeholder="ex. Scrambled Eggs"/>
+            <br />
+            <label for="recipeIDField"><h2>Recipe ID</h2></label>
+            <input type="number" name="recipeIDField" placeholder="ex. 8675309"/>
+            <br />
+            <label for="authorIDField"><h2>Author ID</h2></label>
+            <input type="number" name="authorIDField" placeholder="ex. 920017"/>
+            <br />
+            <label for="categoryField"><h2>Category</h2></label>
+            <input type="text" name="categoryField" placeholder="ex. breakfast" />
+            <br />
+            <label for="ethnicityField"><h2>Ethnicity</h2></label>
+            <input type="text" name="ethnicityField" placeholder="ex. Irish" />
+            <br />
+            <label for="difficultyField"><h2>Difficulty</h2></label>
+            <input type="text" name="difficultyField" placeholder="ex. moderate" />
+            <br />
+            <label for="ingredientsField"><h2>Ingredients</h2></label>
+            <input type="text" name="ingredientsField" placeholder="ex. many lima beans" />
+            <br />
+            <label for="recipeInstructionsField"><h2>Recipe Instructions</h2></label>
+            <input type="text" name="recipeInstructionsField" placeholder="ex. chop onions"/>
+            <br />
+            <label for="cookTimeField"><h2>Cooking Time (minutes)</h2></label>
+            <input type="number" name="cookTimeField" placeholder="ex. 30 (min)"
+            <br />
+            <fieldset>
+                <legend>Special Requirements</legend>
+                <div>
+                    <input type="checkbox" name="vegetarianCheck" value="TRUE">
+                    <label for="vegetarianCheck">vegetarian</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="veganCheck" value="TRUE">
+                    <label for="veganCheck">vegan</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="glutenCheck" value="TRUE">
+                    <label for="glutenCheck">gluten free</label>
+                </div>
+            </fieldset>
+            <input type="submit" value="submit"/>
+        </form>
+    </body>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
