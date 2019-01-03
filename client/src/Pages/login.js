@@ -124,12 +124,12 @@ class Login extends Component {
                                 <form className="box">
                                     <h2 className="big">Please Login</h2>
                                     <div className="inputBox">
-                                        <label htmlFor="inputEmail" className="sr-only inputBox">Email address</label>
-                                        <input type="email" id="inputEmail" placeholder="Email address" required="required" autoFocus="autofocus" value={this.state.userEmail} onChange={this.handleChangeEmail}/>
+                                        <input type="email" id="inputEmail" required="required" autoFocus="autofocus" value={this.state.userEmail} onChange={this.handleChangeEmail}/>
+                                        <label>Email address</label>
                                     </div>
                                     <div className="inputBox">
-                                        <label htmlFor="inputPassword" className="sr-only">Password</label>
-                                        <input type="password" id="inputPassword" placeholder="Password" required="required" value={this.state.userPassword} onChange={this.handleChangePassword}/>
+                                        <input type="password" id="inputPassword" required="required" value={this.state.userPassword} onChange={this.handleChangePassword}/>
+                                        <label>Password</label>
                                     </div>
                                     <div className="checkbox">
                                         <label>
