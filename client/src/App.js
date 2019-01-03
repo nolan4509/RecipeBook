@@ -13,7 +13,7 @@ import NavBar from './Components/NavBar/NavBar';
 import './App.css';
 
 const App = () => (<main>
-    <NavBar/>
+    {/* <NavBar/> */}
     <Switch>
         <Route exact={true} path='/' component={Login}/>
         {/* <Route path='/home' component={Home}/> */}

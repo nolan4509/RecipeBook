@@ -6,7 +6,7 @@ body {
 }
 */
 .backgroundStyle {
-    background-image: url('http://www.freepptbackgrounds.net/wp-content/uploads/2014/02/Restaurant-Menu-Theme-Backgrounds.jpg');
+    background-image: url('/images/RestaurantMenuTheme.jpg');
     background-size: cover;
     /* background-size: 100% 100%; */
     /* background-position: center center; */
