@@ -3,8 +3,8 @@ import React, {
 } from 'react';
 import './login.css';
 import firebase from '../firebase.js';
-import NavBar from '../Components/NavBar/NavBar';
-import RecipesPage from './RecipesPage';
+// import NavBar from '../Components/NavBar/NavBar';
+// import RecipesPage from './RecipesPage';
 require('firebase/auth');
 
 class Login extends Component {
@@ -17,13 +17,12 @@ class Login extends Component {
         this.login = this.login.bind(this);
         this.logout = this.logout.bind(this);
         this.state = {
-            realUserID: '',
             userID: '',
             userName: '',
             userEmail: '',
             userPassword: '',
             userRecipes: [],
-            user: null,
+            loggedIn: false,
             submissionStatus: '',
             rememberMe: true
         }
@@ -35,9 +34,9 @@ class Login extends Component {
     */
     logout() {
         firebase.auth().signOut().then(() => {
-            sessionStorage.removeItem("uid");
+            // sessionStorage.removeItem("uid");
             this.setState({
-                user: null
+                loggedIn: false
             });
         });
 
@@ -57,38 +56,22 @@ class Login extends Component {
     */
     login() {
         firebase.auth().signInWithEmailAndPassword(this.state.userEmail, this.state.userPassword).then((result) => {
-            const user = result.user;
-            this.setState({
-                user
-            });
-            console.log(user);
-            console.log(this.state.user);
             console.log("logged in as id: " + firebase.auth().currentUser.uid);
             this.setState({
-                realUserID: firebase.auth().currentUser.uid
+                userID: firebase.auth().currentUser.uid
             })
-            var uid = firebase.auth().currentUser.uid;
+            this.setState({
+                loggedIn: true
+            })
+            // var uid = firebase.auth().currentUser.uid;
             //      this.props.history.push('/Home');
-        }).then(uid => {
-            sessionStorage.setItem("uid", this.state.realUserID);
-            if (this.state.rememberMe) {
-                localStorage.setItem("uid", this.state.realUserID);
-                localStorage.setItem("expires", this.dateInOneWeek());
-            }
+            // }).then(uid => {
+            // sessionStorage.setItem("uid", this.state.userID);
+            // if (this.state.rememberMe) {
+            // localStorage.setItem("uid", this.state.userID);
+            // localStorage.setItem("expires", this.dateInOneWeek());
+            // }
         });
-        /*
-        .catch(function(error) {
-                console.log(error.code);
-                console.log(error.message);
-            }
-              auth.signInWithPopup(provider).then((result) => {
-                  const user = result.user;
-                  this.setState({
-                      user
-                  });
-                  this.props.history.push('/Home')
-              });
-              */
     };
 
     handleChangeEmail(event) {
@@ -123,26 +106,15 @@ class Login extends Component {
         return newDate;
     }
 
-    componentDidMount() {
-        // console.log(firebase.auth().currentUser.uid);
-        firebase.auth().onAuthStateChanged((user) => {
-            if (user) {
-                this.setState({
-                    user
-                }); // When user signs in, checks the firebase database to see
-                // if they were already previously authenticated, if so, restore
-            }
-        });
-    }
-
     render() {
         return (<div>
             <div>
-                <NavBar/>
+                {/* <NavBar/> */}
+                <p>{this.state.loggedIn}</p>
                 {
-                    this.state.user
+                    this.state.loggedIn
                         ? <div className="backgroundStyle">
-                                <RecipesPage history={this.props.history} currentUserID={firebase.auth().currentUser.uid}/>
+                                {/* <RecipesPage history={this.props.history} currentUserID={firebase.auth().currentUser.uid}/> */}
                                 <button className="btn btn-lg btn-primary btn-block" type="submit" onClick={this.logout}>Log Out</button>
                             </div>
                         : <div>

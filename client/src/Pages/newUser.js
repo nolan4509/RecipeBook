@@ -53,7 +53,6 @@ class newUser extends Component {
             console.log(error.code);
             console.log(error.message);
         });
-        //    firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password);
         this.props.history.push('/');
     };
 
